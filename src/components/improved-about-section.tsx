@@ -23,7 +23,7 @@ export default function ImprovedAboutSection() {
               >
                 <path
                   d="M30 0L37.5 22.5L60 30L37.5 37.5L30 60L22.5 37.5L0 30L22.5 22.5L30 0Z"
-                  fill="#4ADE80"
+                  fill="#00AAE8"
                 />
               </svg>
             </motion.span>

@@ -6,6 +6,8 @@ import { useRef, useState, useEffect } from "react";
 import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 import ImprovedAboutSection from "./improved-about-section";
 import teamImage from "../app/team.webp";
+import africaImage from "../app/africa-map.jpg";
+import logo from "../app/fikra-logo.png";
 
 export function ParallaxLandingPageComponent() {
   const topRef = useRef(null);
@@ -21,9 +23,37 @@ export function ParallaxLandingPageComponent() {
   const textOpacity = useTransform(topScrollProgress, [0, 0.3], [1, 0]);
   const textScale = useTransform(topScrollProgress, [0, 0.3], [1, 1.2]);
 
+    // Navigation items
+  const navItems = [
+    { name: "Home", href: "#top" },
+    { name: "Work", href: "#work" },
+    { name: "Team", href: "#team" },
+    { name: "About", href: "#about" },
+    { name: "Contact", href: "#footer" },
+  ];
+
   return (
     <ParallaxProvider>
       <div className="min-h-screen bg-white text-black">
+        <nav className="fixed top-0 left-0 w-full z-50">
+          <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div className="text-xl font-bold p-2 bg-black rounded-full">
+              <Image src={logo.src} alt="Fikra Digital Logo" width={50} height={50} />
+            </div>
+            <ul className="flex space-x-8">
+              {navItems.map((item, idx) => (
+                <li key={idx}>
+                  <a
+                    href={item.href}
+                    className="text-gray-800 hover:text-green-500 transition-colors"
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </nav>
         <section ref={topRef} className="relative h-[400vh]">
           <div className="sticky top-0 h-screen w-full overflow-hidden">
             <motion.div
@@ -34,7 +64,7 @@ export function ParallaxLandingPageComponent() {
               }}
             >
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/africa-program-Vxgcneg8AcF8OYcJB713GgVkkGo1TY.svg"
+                src={africaImage}
                 alt="Map of Africa"
                 layout="fill"
                 objectFit="contain"
@@ -42,12 +72,20 @@ export function ParallaxLandingPageComponent() {
               />
             </motion.div>
             <motion.div
-              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-10"
+              className="absolute top-1/2 left-48 transform -translate-x-1/2 -translate-y-1/2 text-start z-10"
               style={{ opacity: textOpacity, scale: textScale }}
             >
-              <h1 className="text-6xl md:text-8xl font-bold text-white drop-shadow-lg">
+              <h1 className="text-6xl md:text-8xl font-bold text-black drop-shadow-lg">
                 FIKRA DIGITAL
               </h1>
+              <div className="ml-8">
+                <p className="text-xl md:text-2xl mt-4 text-black drop-shadow-md">
+                  Bridging Africa's Heritage with Tomorrow's Technology <span className="text-[#00AAE8] animate-ping">|</span>
+                </p>
+                <button className="mt-6 px-6 py-3 bg-[#00AAE8] text-black font-bold rounded-lg hover:bg-[#0088CC] transition-colors">
+                  Learn More
+                </button>
+              </div>
             </motion.div>
           </div>
         </section>
@@ -64,7 +102,7 @@ export function ParallaxLandingPageComponent() {
                   <br />
                   TECH STUDIO
                   <motion.span
-                    className="inline-block w-12 h-12 rounded-full bg-green-400 ml-4"
+                    className="inline-block w-12 h-12 rounded-full bg-[#00AAE8] ml-4"
                     animate={{ rotate: 360 }}
                     transition={{
                       duration: 2,
@@ -90,9 +128,11 @@ export function ParallaxLandingPageComponent() {
 
           <section className="bg-gray-100 py-24">
             <div className="container mx-auto px-4">
-              <h2 className="text-4xl md:text-7xl font-bold mb-12 text-start uppercase">
-                Our <br /> Work
-              </h2>
+              <div className="mb-12">
+                <h2 className="text-4xl md:text-7xl font-bold mb-4 text-start uppercase">
+                  Our <br /> Services
+                </h2>
+              </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {[
