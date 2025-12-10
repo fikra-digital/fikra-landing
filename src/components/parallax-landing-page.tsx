@@ -45,7 +45,7 @@ export function ParallaxLandingPageComponent() {
                 <li key={idx}>
                   <a
                     href={item.href}
-                    className="text-gray-800 hover:text-green-500 transition-colors"
+                    className="text-gray-800 hover:text-[#00AAE8] transition-colors"
                   >
                     {item.name}
                   </a>
@@ -80,7 +80,7 @@ export function ParallaxLandingPageComponent() {
               </h1>
               <div className="ml-8">
                 <p className="text-xl md:text-2xl mt-4 text-black drop-shadow-md">
-                  Bridging Africa's Heritage with Tomorrow's Technology <span className="text-[#00AAE8] animate-ping">|</span>
+                  Bridging Africa&apos;s Heritage with Tomorrow&apos;s Technology <span className="text-[#00AAE8] animate-ping">|</span>
                 </p>
                 <button className="mt-6 px-6 py-3 bg-[#00AAE8] text-black font-bold rounded-lg hover:bg-[#0088CC] transition-colors">
                   Learn More
