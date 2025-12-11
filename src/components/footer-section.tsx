@@ -22,7 +22,7 @@ const FooterSection = () => {
   const nextWord = words[(currentWordIndex + 1) % words.length];
 
   return (
-    <footer className="py-8 bg-white overflow-hidden">
+    <footer id="footer" className="py-8 bg-white overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-8xl sm:text-9xl md:text-[12rem] lg:text-[16rem] xl:text-[20rem] font-bold text-center leading-none flex flex-col items-center">
           <div className="flex justify-center">

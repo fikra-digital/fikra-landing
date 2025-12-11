@@ -8,9 +8,9 @@ const StatementSection = () => {
             <div className="container mx-auto px-4">
               <Parallax speed={-5}>
                 <h2 className="text-5xl md:text-7xl font-bold mb-12">
-                  FIKRA IS A DESIGN-DRIVEN
+                  FIKRA EST UN STUDIO
                   <br />
-                  TECH STUDIO
+                    TECHNOLOGIQUE AFRICAIN
                   <motion.span
                     className="inline-block w-12 h-12 rounded-full bg-[#00AAE8] ml-4"
                     animate={{ rotate: 360 }}
@@ -21,16 +21,15 @@ const StatementSection = () => {
                     }}
                   />
                   <br />
-                  BUILDING
+                  QUI CONSTRUIT
                   <br />
-                  FUTURE EXPERIENCES
+                  LES EXPÉRIENCES DU FUTUR
                 </h2>
               </Parallax>
               <Parallax speed={-10}>
                 <p className="text-xl md:text-2xl mb-8">
-                  We bring African-inspired innovation to the digital world,
-                  creating unique experiences that bridge tradition and
-                  technology.
+                    Nous apportons une innovation inspirée de l’Afrique au monde digital,
+                    en créant des expériences uniques qui relient tradition et technologie.
                 </p>
               </Parallax>
             </div>

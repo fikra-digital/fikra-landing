@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function ImprovedAboutSection() {
   return (
-    <section className="min-h-screen bg-white text-black flex flex-col">
+    <section id="about" className="min-h-screen bg-white text-black flex flex-col">
       <main className="flex-grow flex flex-col justify-center items-center px-4 md:px-6">
         <div className="max-w-4xl w-full">
           <h1 className="text-6xl md:text-8xl font-bold mb-8 flex items-center">

@@ -8,7 +8,7 @@ const TeamSection = () => {
   const containerRef = useRef(null);
 
   return (
-    <section ref={containerRef} className="bg-white py-24 overflow-hidden">
+    <section id="team" ref={containerRef} className="bg-white py-24 overflow-hidden">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl md:text-7xl font-bold mb-12 text-start uppercase">
           Rencontrez <br /> Notre Équipe
