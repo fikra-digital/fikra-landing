@@ -1,9 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { ParallaxProvider, Parallax } from "react-scroll-parallax";
+import { ParallaxProvider } from "react-scroll-parallax";
 import AfricanAnimatedDrawings from "./africanDrawing-animation";
 import NavigationSection from "./navigation-section";
 import AboutSection from "./about-section";

@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from "next/image";
 
 import ServiceCard from './ServiceCard';
 import { Parallax } from "react-scroll-parallax";
@@ -7,7 +6,7 @@ import { services } from '@/constant/services';
 
 const ServicesSection = () => {
   return (
-          <section id="services" className="bg-gray-100 py-24">
+          <section id="services" className="bg-gray-100 py-24 px-4 md:px-12 lg:px-32">
             <div className="container mx-auto px-4">
               <div className="mb-12">
                 <h2 className="text-4xl md:text-7xl font-bold mb-4 text-start uppercase">

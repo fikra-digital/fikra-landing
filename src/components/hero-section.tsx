@@ -1,15 +1,14 @@
 import React from 'react'
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion, MotionValue  } from "framer-motion";
 import Image from "next/image";
 import africaImage from "../app/africa-map.jpg";
 
 const HeroSection: React.FC<{
     topRef: React.RefObject<HTMLElement>;
-    topImageScale: any;
-    topImageOpacity: any;
-    textOpacity: any;
-    textScale: any;
+    topImageScale: MotionValue<number> | number;
+    topImageOpacity: MotionValue<number> | number;
+    textOpacity: MotionValue<number> | number;
+    textScale: MotionValue<number> | number;
 }> = ({ topRef, topImageScale, topImageOpacity, textOpacity, textScale
 }) => {
   return (
@@ -31,7 +30,7 @@ const HeroSection: React.FC<{
               />
             </motion.div>
             <motion.div
-              className="absolute top-1/2 left-48 transform -translate-x-1/2 -translate-y-1/2 text-start z-10"
+              className="absolute top-1/2 left-8 md:left:-24 lg:left-48 transform -translate-x-1/2 -translate-y-1/2 text-start z-10"
               style={{ opacity: textOpacity, scale: textScale }}
             >
               <h1 className="text-6xl md:text-8xl font-bold text-black drop-shadow-lg">

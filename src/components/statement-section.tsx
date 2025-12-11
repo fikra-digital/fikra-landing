@@ -4,15 +4,15 @@ import { motion } from "framer-motion";
 
 const StatementSection = () => {
   return (
-          <section id="start" className="bg-white py-24">
+          <section id="start" className="bg-white py-24 px-4 md:px-12 lg:px-32">
             <div className="container mx-auto px-4">
               <Parallax speed={-5}>
-                <h2 className="text-5xl md:text-7xl font-bold mb-12">
+                <h2 className="text-4xl md:text-6xl font-bold mb-12">
                   FIKRA EST UN STUDIO
                   <br />
                     TECHNOLOGIQUE AFRICAIN
                   <motion.span
-                    className="inline-block w-12 h-12 rounded-full bg-[#00AAE8] ml-4"
+                    className="inline-block w-6 md:w-12 h-6 md:h-12 rounded-full bg-[#00AAE8] ml-4"
                     animate={{ rotate: 360 }}
                     transition={{
                       duration: 2,

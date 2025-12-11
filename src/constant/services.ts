@@ -13,7 +13,7 @@ interface Service {
   image: StaticImageData;
 }
 
-export const services = [
+export const services:Service[] = [
   {
     title: "Développement des systèmes informatiques",
     description:
