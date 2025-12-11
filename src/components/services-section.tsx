@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from "next/image";
 
+import ServiceCard from './ServiceCard';
 import { Parallax } from "react-scroll-parallax";
 import { services } from '@/constant/services';
 
@@ -17,7 +18,12 @@ const ServicesSection = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {services.map((project, index) => (
                   <Parallax key={index}>
-                    <div className="bg-white rounded-lg overflow-hidden shadow-lg">
+                    <ServiceCard
+                      title={project.title}
+                      description={project.description}
+                      icon={project.image}
+                    />
+                    {/* <div className="bg-white rounded-lg overflow-hidden shadow-lg">
                       <Image
                         src={project.image}
                         alt={project.title}
@@ -33,7 +39,7 @@ const ServicesSection = () => {
                           {project.description}
                         </p>
                       </div>
-                    </div>
+                    </div> */}
                   </Parallax>
                 ))}
               </div>

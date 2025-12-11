@@ -9,6 +9,7 @@ import NavigationSection from "./navigation-section";
 import AboutSection from "./about-section";
 import StatementSection from "./statement-section";
 import HeroSection from "./hero-section";
+import ProjectSection from "./project-section";
 import TeamSection from "./team-section";
 import ImpactSection from "./impact-section";
 import ServicesSection from "./services-section";
@@ -48,6 +49,7 @@ export function ParallaxLandingPageComponent() {
         >
           <ServicesSection />
           <TeamSection />
+          <ProjectSection />
           <ImpactSection />
           <AboutSection />
           <FooterSection />
